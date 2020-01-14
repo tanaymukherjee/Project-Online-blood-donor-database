@@ -1,0 +1,56 @@
+					Blood Donor Database
+					     Help Manual
+
+
+
+1. Every User Has To Make a Profile of their own by "Signing Up" First.
+
+2. Registration has got two modes : 
+	a) Donor Registration Form : To help an end user to register as a donor.	
+	b) Hospital/ Blood Bank Registration Form : To help any hospital/ blood bank to register to have their own profile in order to access personal details of donor.
+
+3. In case, one had forgotten the password : he can still recieve his password through "Forgot Password" link after submitting his email id in the text field provided.
+
+4. For searching donors from the database one must select ---- state, city and blood group from " Find a Donor" section to retrieve data.
+
+5. For posting blood request, it is not necessary to register on the portal.
+
+6. "Rotary Club Participation Form" is provided for clubs to promote blood donation by initiating such live campaigns.
+
+7. Scheme like "Invite Your Friends"  provides the facility to spread awareness among known relatives and friends.
+
+8. Extra feature like "Other Social Welfare Sites" is given in our portal to ensure people who register here can also register in other such social sites .
+
+9. "Photo Gallery" is given to share media messages of our portal among the viewers or our site.
+
+10. "Donor's Speak" is actually for sharing the testimonials of our members of the site to tell what they think about this social initiative or how they are benefited through "Feedback Form" provided.
+
+11. Validation is provided on each form so that any end user can't skip the mandatory details 
+and hence cannot submit it.
+
+12. Hospital/ Blood Bank can view the personnel details of donors; for this a different seperate search engine is made available inside their profile.
+
+13. "CAPTCHA" technique is available in all registration forms.
+
+14. "Feedback Form" is platform given to users to share with us their views and experiences but whether it will be displayed on the portal or not is mentioned in the "Terms And Conditions".
+
+15. After Verification Of details entered in the respective forms, a confirmation mail is sent to the given mail id.
+
+16. Password will be automatically generated for hospitals, they can't choose it on their own for security purpose.
+
+17. Donor's password will be 1's complemented to make sure that it remains secure and even admin can't misuse their profile.
+
+18. Complaint/ Suggestion Form is provided inside the donor and hospital/ blood bank profile so that they can interact with admin for any issues.
+
+19. Preference Rating is displayed at the home page of donors which tells us about the number of donations they had made and thus the points earned accordingly.
+
+20. Profile Details can be updated. This mechanism is provided to donors, hospitals and admin.
+
+21. "My History" system is available in the donor's profile so that whenever they make any blood donations; they log into their profile and let the admin know about it which in turn will provide them ratings to help them in future.
+
+22. "View complaint, feedback, blood request and rotary club request" is provided to admin so that they can have the log of whatever happening in their portal.
+
+23. Social Plug-ins is there in our portal so to connect this scenario to the outer world via networking sites like facebook, twitter and google plus.
+
+
+

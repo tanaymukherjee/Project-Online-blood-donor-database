@@ -1,0 +1,19 @@
+Procedure to deploy a project on new machine:-
+
+1. First of all import war file in Eclipse.
+
+2. Execute the DDL commands to create tables in DB2.
+
+3.Execute the backup file.
+
+4. Now, connect the DB2 to Eclipse.
+
+5. And also start webspher application server.
+
+6. Now, enjoy the site.
+
+Installation Requirement:-
+
+1.DB2 v9.1
+2.Eclipse helios  v3.6.0
+3 websphere  v2.1
