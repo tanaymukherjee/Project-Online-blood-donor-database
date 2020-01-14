@@ -1,0 +1,342 @@
+-- This CLP file was created using DB2LOOK Version 9.1
+-- Timestamp: 4/4/2012 9:14:54 PM
+-- Database Name: TEST           
+-- Database Manager Version: DB2/NT Version 9.1.0          
+-- Database Codepage: 1252
+-- Database Collating Sequence is: UNIQUE
+
+
+CONNECT TO TEST;
+
+-- Mimic tablespace
+
+ALTER TABLESPACE SYSCATSPACE
+      PREFETCHSIZE AUTOMATIC
+      OVERHEAD 7.500000
+      TRANSFERRATE 0.060000;
+
+
+ALTER TABLESPACE TEMPSPACE1
+      PREFETCHSIZE AUTOMATIC
+      OVERHEAD 7.500000
+      TRANSFERRATE 0.060000;
+
+
+ALTER TABLESPACE USERSPACE1
+      PREFETCHSIZE AUTOMATIC
+      OVERHEAD 7.500000
+      TRANSFERRATE 0.060000;
+
+
+------------------------------------------------
+-- DDL Statements for table "SHIKHAR "."STATE_MASTER"
+------------------------------------------------
+ 
+
+CREATE TABLE "SHIKHAR "."STATE_MASTER"  (
+		  "STATE_ID" VARCHAR(20) NOT NULL , 
+		  "STATE_NAME" VARCHAR(30) NOT NULL , 
+		  "STATE_CODE" CHAR(3) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+-- DDL Statements for primary key on Table "SHIKHAR "."STATE_MASTER"
+
+ALTER TABLE "SHIKHAR "."STATE_MASTER" 
+	ADD CONSTRAINT "CC1331568464062" PRIMARY KEY
+		("STATE_ID");
+
+
+
+------------------------------------------------
+-- DDL Statements for table "SHIKHAR "."DISTRICT_MASTER"
+------------------------------------------------
+ 
+
+CREATE TABLE "SHIKHAR "."DISTRICT_MASTER"  (
+		  "DISTRICT_ID" VARCHAR(10) NOT NULL , 
+		  "DISTRICT_NAME" VARCHAR(30) NOT NULL , 
+		  "STATE_ID" VARCHAR(20) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+-- DDL Statements for primary key on Table "SHIKHAR "."DISTRICT_MASTER"
+
+ALTER TABLE "SHIKHAR "."DISTRICT_MASTER" 
+	ADD CONSTRAINT "CC1331573592953" PRIMARY KEY
+		("DISTRICT_ID");
+
+
+
+------------------------------------------------
+-- DDL Statements for table "SHIKHAR "."DONOR_REGISTRATION"
+------------------------------------------------
+ 
+
+CREATE TABLE "SHIKHAR "."DONOR_REGISTRATION"  (
+		  "FIRST_NAME" VARCHAR(30) NOT NULL , 
+		  "LAST_NAME" VARCHAR(30) NOT NULL , 
+		  "EMAIL_ID" VARCHAR(50) NOT NULL , 
+		  "PASSWORD" VARCHAR(40) NOT NULL , 
+		  "GENDER" VARCHAR(10) NOT NULL , 
+		  "BLOOD_GROUP" VARCHAR(10) NOT NULL , 
+		  "DATE" BIGINT NOT NULL , 
+		  "MNTH" VARCHAR(10) NOT NULL , 
+		  "YR" BIGINT NOT NULL , 
+		  "MOBILE_NO" BIGINT NOT NULL , 
+		  "LANDLINE_NO" BIGINT , 
+		  "STATE" VARCHAR(30) NOT NULL , 
+		  "CITY" VARCHAR(50) NOT NULL , 
+		  "PINCODE" BIGINT NOT NULL , 
+		  "ADDRESS" VARCHAR(150) NOT NULL , 
+		  "DONOR_STATUS" VARCHAR(30) NOT NULL , 
+		  "ODATE" DATE , 
+		  "DDATE" DATE , 
+		  "POINTS" INTEGER , 
+		  "AGE" INTEGER )   
+		 IN "USERSPACE1" ; 
+
+
+-- DDL Statements for primary key on Table "SHIKHAR "."DONOR_REGISTRATION"
+
+ALTER TABLE "SHIKHAR "."DONOR_REGISTRATION" 
+	ADD CONSTRAINT "CC1332100908437" PRIMARY KEY
+		("EMAIL_ID",
+		 "PASSWORD");
+
+
+
+------------------------------------------------
+-- DDL Statements for table "SHIKHAR "."ADMIN"
+------------------------------------------------
+ 
+
+CREATE TABLE "SHIKHAR "."ADMIN"  (
+		  "ADMIN_ID" VARCHAR(10) NOT NULL , 
+		  "ADMIN_NAME" VARCHAR(30) NOT NULL , 
+		  "DOB" DATE NOT NULL , 
+		  "GENDER" VARCHAR(10) NOT NULL , 
+		  "ADDRESS" VARCHAR(100) NOT NULL , 
+		  "CONTACT_NO" BIGINT NOT NULL , 
+		  "EMAIL_ID" VARCHAR(50) NOT NULL , 
+		  "PASSWORD" VARCHAR(40) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+-- DDL Statements for primary key on Table "SHIKHAR "."ADMIN"
+
+ALTER TABLE "SHIKHAR "."ADMIN" 
+	ADD CONSTRAINT "CC1331895623906" PRIMARY KEY
+		("ADMIN_ID",
+		 "EMAIL_ID",
+		 "PASSWORD");
+
+
+
+------------------------------------------------
+-- DDL Statements for table "SHIKHAR "."FEEDBACK"
+------------------------------------------------
+ 
+
+CREATE TABLE "SHIKHAR "."FEEDBACK"  (
+		  "EMAILID" VARCHAR(50) NOT NULL , 
+		  "PASSWORD" VARCHAR(40) NOT NULL , 
+		  "FNAME" VARCHAR(30) NOT NULL , 
+		  "LNAME" VARCHAR(30) NOT NULL , 
+		  "STORY" VARCHAR(1500) NOT NULL , 
+		  "DATE" VARCHAR(50) NOT NULL , 
+		  "STATUS" VARCHAR(15) )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "SHIKHAR "."COMPLAINT"
+------------------------------------------------
+ 
+
+CREATE TABLE "SHIKHAR "."COMPLAINT"  (
+		  "COMPLAINTID" VARCHAR(10) NOT NULL , 
+		  "EMAILID" VARCHAR(40) NOT NULL , 
+		  "SUBJECT" VARCHAR(100) NOT NULL , 
+		  "COMPLAINT" VARCHAR(1000) NOT NULL , 
+		  "DATE" VARCHAR(30) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+-- DDL Statements for primary key on Table "SHIKHAR "."COMPLAINT"
+
+ALTER TABLE "SHIKHAR "."COMPLAINT" 
+	ADD CONSTRAINT "CC1332338273750" PRIMARY KEY
+		("COMPLAINTID");
+
+
+
+------------------------------------------------
+-- DDL Statements for table "SHIKHAR "."INVITE_FRIEND"
+------------------------------------------------
+ 
+
+CREATE TABLE "SHIKHAR "."INVITE_FRIEND"  (
+		  "EMAILID" VARCHAR(50) NOT NULL , 
+		  "FNAME" VARCHAR(50) NOT NULL , 
+		  "FEMAILID" VARCHAR(50) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "SHIKHAR "."DONOR_HISTORY"
+------------------------------------------------
+ 
+
+CREATE TABLE "SHIKHAR "."DONOR_HISTORY"  (
+		  "EMAIL_ID" VARCHAR(50) NOT NULL , 
+		  "DATE" DATE NOT NULL , 
+		  "HNAME" VARCHAR(50) NOT NULL , 
+		  "HLOCATION" VARCHAR(150) NOT NULL , 
+		  "CITY" VARCHAR(40) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+------------------------------------------------
+-- DDL Statements for table "SHIKHAR "."DONOR_UPDATEHISTORY"
+------------------------------------------------
+ 
+
+CREATE TABLE "SHIKHAR "."DONOR_UPDATEHISTORY"  (
+		  "EMAIL_ID" VARCHAR(50) NOT NULL , 
+		  "DATE" DATE NOT NULL , 
+		  "HNAME" VARCHAR(50) NOT NULL , 
+		  "HLOCATION" VARCHAR(150) NOT NULL , 
+		  "CITY" VARCHAR(50) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+-- DDL Statements for primary key on Table "SHIKHAR "."DONOR_UPDATEHISTORY"
+
+ALTER TABLE "SHIKHAR "."DONOR_UPDATEHISTORY" 
+	ADD CONSTRAINT "CC1332673971359" PRIMARY KEY
+		("EMAIL_ID");
+
+
+
+------------------------------------------------
+-- DDL Statements for table "SHIKHAR "."BLOODREQUEST"
+------------------------------------------------
+ 
+
+CREATE TABLE "SHIKHAR "."BLOODREQUEST"  (
+		  "REQUESTID" VARCHAR(30) NOT NULL , 
+		  "PFNAME" VARCHAR(50) NOT NULL , 
+		  "PLNAME" VARCHAR(50) NOT NULL , 
+		  "EMAILID" VARCHAR(50) NOT NULL , 
+		  "GENDER" VARCHAR(10) NOT NULL , 
+		  "BLOODGRP" VARCHAR(10) NOT NULL , 
+		  "DATE" INTEGER NOT NULL , 
+		  "MONTH" VARCHAR(50) NOT NULL , 
+		  "YEAR" INTEGER NOT NULL , 
+		  "MOBILENO" BIGINT NOT NULL , 
+		  "LLNO" BIGINT , 
+		  "STATE" VARCHAR(60) NOT NULL , 
+		  "CITY" VARCHAR(60) NOT NULL , 
+		  "HNAME" VARCHAR(60) NOT NULL , 
+		  "PADDRESS" VARCHAR(150) NOT NULL , 
+		  "HADDRESS" VARCHAR(150) NOT NULL , 
+		  "PURPOSE" VARCHAR(150) , 
+		  "MEMBER" VARCHAR(30) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+-- DDL Statements for primary key on Table "SHIKHAR "."BLOODREQUEST"
+
+ALTER TABLE "SHIKHAR "."BLOODREQUEST" 
+	ADD CONSTRAINT "CC1333270664140" PRIMARY KEY
+		("REQUESTID");
+
+
+
+------------------------------------------------
+-- DDL Statements for table "SHIKHAR "."HOSPITAL_REGISTRATION"
+------------------------------------------------
+ 
+
+CREATE TABLE "SHIKHAR "."HOSPITAL_REGISTRATION"  (
+		  "H_NAME" VARCHAR(50) NOT NULL , 
+		  "PASSWORD" VARCHAR(40) NOT NULL , 
+		  "H_REGISTRATIONNO" VARCHAR(30) NOT NULL , 
+		  "PEMAILID" VARCHAR(50) NOT NULL , 
+		  "SEMAILID" VARCHAR(50) , 
+		  "CONTACTNO" BIGINT NOT NULL , 
+		  "HOSPITALWEBSITE" VARCHAR(50) , 
+		  "STATE" VARCHAR(30) NOT NULL , 
+		  "CITY" VARCHAR(30) NOT NULL , 
+		  "PINCODE" BIGINT NOT NULL , 
+		  "ADDRESS" VARCHAR(150) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+-- DDL Statements for primary key on Table "SHIKHAR "."HOSPITAL_REGISTRATION"
+
+ALTER TABLE "SHIKHAR "."HOSPITAL_REGISTRATION" 
+	ADD CONSTRAINT "CC1332099647625" PRIMARY KEY
+		("H_REGISTRATIONNO");
+
+
+-- DDL Statements for unique constraints on Table "SHIKHAR "."HOSPITAL_REGISTRATION"
+
+
+ALTER TABLE "SHIKHAR "."HOSPITAL_REGISTRATION" 
+	ADD CONSTRAINT "CC1332099662187" UNIQUE
+		("PEMAILID");
+
+
+------------------------------------------------
+-- DDL Statements for table "SHIKHAR "."ROTARYCLUB"
+------------------------------------------------
+ 
+
+CREATE TABLE "SHIKHAR "."ROTARYCLUB"  (
+		  "RNAME" VARCHAR(100) NOT NULL , 
+		  "REMAILID" VARCHAR(50) NOT NULL , 
+		  "CONTACTNO" BIGINT NOT NULL , 
+		  "RWEBSITE" VARCHAR(50) , 
+		  "STATE" VARCHAR(50) NOT NULL , 
+		  "CITY" VARCHAR(50) NOT NULL , 
+		  "PINCODE" BIGINT NOT NULL , 
+		  "LOCATION" VARCHAR(150) NOT NULL )   
+		 IN "USERSPACE1" ; 
+
+
+
+
+
+
+
+
+
+
+
+
+COMMIT WORK;
+
+CONNECT RESET;
+
+TERMINATE;
+
+-- Specified SCHEMA is: SHIKHAR
+-- The db2look utility will consider only the specified tables 
+-- Creating DDL for table(s)
+
+-- Schema name is ignored for the Federated Section
+;
