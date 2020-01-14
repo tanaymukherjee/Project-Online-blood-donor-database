@@ -1,0 +1,310 @@
+﻿<head>
+  <script type="text/javascript" language="javascript" src="lib/search.js"></script>
+       <script language="JavaScript" src="lib/search.js"></script>
+<script type="text/javascript" language="javascript" src="lib/rotary.js"></script>
+       <script language="JavaScript" src="lib/rotary.js"></script>
+
+<script type='text/javascript' src="lib/verifymail.js"></script>
+         <script type="text/javascript" src="lib/statecity.js"></script>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Sahyog</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link href="styles.css" rel="stylesheet" type="text/css" media="screen" />
+    </head>
+    <body onLoad="DrawCaptcha();">
+    	<div id="wrap">
+				<div id="menu">
+					<ul>
+						<li><a href="index.html" class="active">Home</a></li>
+						<li><a href="lawsandfacts.html">Laws & Facts</a></li>
+						<li><a href="faqs.html">FAQs</a></li>
+						<li><a href="feedback.html">Feedback</a></li>
+						<li><a href="aboutus.html">About Us</a></li>
+					</ul>
+				</div>
+                <br>
+                <br>
+               
+                <div class="logo_text">
+				<table>			
+      <tr><td width="20%"><a href="logodescription.html"><img src="images/final logo.JPG" width="200" height="100" alt="final logo"/>
+ 
+</a></td>
+<td width="80%"><marquee direction="left" onmouseover="this.stop();" onmouseout="this.start();"><FONT size="5" class="header1"><font color="red"><b>You need not be a doctor always to save life, just donate blood. Save life. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Blood alone moves the wheels of history. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+When anyone fills a blood donor form, he is signing a lease of life for someone else. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+Blood has got no caste, so be human. Donate blood, help fellow humans.</marquee></font></b></font>
+</td ></tr></table>
+		</div>
+        
+        
+    
+         	<!-- directory -->
+				<div id="top_padding"></div>
+				
+				<div id="content_top"></div>
+				
+				<div id="content_bg_repeat">
+					
+					
+				<div id="content">
+                    <div class="contact_content_left">
+
+                        <h5><font color="lightgreen">Rotary Club Participation Form </font></h5>
+                           <div class="box1">
+  <form action="rotaryclub.jsp" method="POST" name="Rotary_Registration" onsubmit="return check();">
+    
+
+<p><strong><font color="yellow"> Respected Rotary Club Admin,</font></strong></p><p><strong><font color="yellow">Please fill the following informations to ensure successful participation</font></strong></p><br><div class="linktxt" align="right"><strong><font color="red">* Mark fields are mandatory</font></strong></div><br><table border="0">
+
+
+
+
+	
+
+  <tbody><tr>
+	<td><strong>Rotary Club Name*</strong></td>
+	<td>
+	<input name="hname" type="text">
+	</td>
+</tr>
+  
+ 
+<tr>
+	<td><strong>Valid Email ID*</strong></td>
+	<td>
+	<input name="vpemailid" type="text">
+	</td>
+
+</tr>
+
+
+   <tr>
+	<td><strong>Contact Number*</strong></td>
+	<td>
+	<input name="contactno" type="text">
+	</td>
+</tr>
+  <tr>
+	<td><strong>Rotary Club Web Site</strong></td>
+	<td>
+	<input name="hwebsite" type="text">
+	</td>
+</tr>
+ <tr>   
+<td><strong>State*</strong></td>
+
+        <td>   
+      	
+				<select name="state1" id="state1" onchange="setCities1();">
+
+				  <option value=""> --- Select State ---</option>
+                             <option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option> A n N Islands</option><option>Assam</option><option>Bihar</option><option>Chandigarh</option><option>Chhattisgarh</option><option>Dadra and Nagar Haveli</option><option>Daman and Diu</option><option>Delhi</option><option>Goa</option>
+<option>Gujarat</option><option>Haryana</option><option>Himachal Pradesh</option><option>Jammu and Kashmir</option><option>Jharkhand</option><option>Karnataka</option><option>Kerala</option><option>Lakshadweep</option><option>Madhya Pradesh</option><option>Maharashtra</option>
+<option>Manipur</option><option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option><option>Orissa</option><option>Pondicherry</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option><option>Tripura</option>
+<option>Uttar Pradesh</option><option>Uttarakhand(Uttaranchal) </option><option>West Bengal</option></select>
+
+  </td>  
+  </tr>
+  
+  
+  <tr>
+	<td><strong>City*</strong></td>
+	<td>  
+ <select name="city1" id="city1"><option value="">---Select City---</option> </select>
+    </td>
+    </tr>
+
+<tr>
+	<td><strong>Pincode*</strong></td>
+	<td>
+	<input name="pincode" type="text">
+	</td>
+</tr>
+
+<tr>
+	<td><strong>Rotary Club Loctaion*</strong></td>
+	<td>
+	<textarea rows="3" name="address" onfocus="if(this.value==this.defaultValue)this.value='';" onblur="if(this.value=='')this.value=this.defaultValue;">Type location of the Rotary Club</textarea>
+	</td>
+</tr>
+
+
+
+<tr>
+<td colspan="10">
+<br>
+<fieldset style="border-color: rgb(204, 204, 204); border-style: solid; border-width: 1px; border-radius: 1px 1px 1px 1px;">
+<!-- this is the title -->
+<legend><font class="header1" face="Arial" size="2"><b><font color="red"> Form Verification </font></b></font></legend><font class="header1" face="Arial" size="2">
+<table cellpadding="1" cellspacing="8" width="600">
+  <tbody><tr>
+      <td>
+        <input id="txtCaptcha" name="txtCaptcha" readonly="readonly" style="" type="text">
+        <input id="btnrefresh" value="Refresh" onclick="DrawCaptcha();" type="button">
+    </td>
+    
+    </tr><tr>
+    <td>
+        <input id="txtInput" name="txtInput" type="text">    
+    </td>
+</tr>
+    
+ <tr>
+<td colspan="10" style="width: 400px;">
+<input name="agrrement" value="confirmation" type="checkbox"> I hereby assure that all the details filled here are true to my knowledge and hence I take the responsibility if there is any violation of mandatory details. I invite your team further for helding campaigns to bring this initiative on a broader view.
+</td>
+</tr>   
+    
+    
+</tbody></table>
+</font>
+</fieldset>
+</td></tr>
+
+<tr>
+	<td colspan="2">
+
+	<input value="Submit" type="submit">
+	
+</td></tr>
+</tbody></table></form>
+
+
+</div>
+                    </div>
+                    
+                   
+
+
+                   <div class="contact_content_right">
+                      <form action="slogin.jsp" method="POST" name="form" onsubmit="return verifyEmail();">
+                        <div class="box1">
+                    	<h2><font color="lightgreen">Sign In</font></h2><font color="lightgreen">
+                      <font color="lightgreen"><b>User Id</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><input name="userid" value="" type="text">
+      <br> <br> <font color="lightgreen"><b>Password</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font> <input name="password" value="" type="password"> 
+      <br>
+      <br>
+      
+      <input value="Login" type="submit"> <a href="forgot_psswd_1.html">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="lightgreen"><u>Forgot Password&nbsp;?</u></font></a>
+      
+      <br>
+      <br>
+      
+      
+   
+           <font color="lightgreen"><b>Not member yet? Click below to register.</b>
+      <ul> 
+
+					<li><a href="userregistration.html">Donor Registration</a></li> 
+
+					<li><a href="hospitalregistration.html">Hospital/ Blood Bank Registration</a></li> 
+</ul>
+      
+       
+    
+                    </font></font></div><font color="lightgreen"><font color="lightgreen">
+                    
+                
+                  	<!-- /.box1 -->
+                  </font></font></form></div><font color="lightgreen"><font color="lightgreen">
+              	  <div class="metam2">
+                  	<!-- .box1 -->
+ <form action="ssearchdonor1.jsp" method="post" name="SEARCH" onsubmit="return Valid1();">
+                  	<div class="box1">
+                    	<h2>Find a Donor</h2>
+                      <font color="lightgreen"><b>State</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select select="" name="state" id="state" onchange="setCities();"> <option> ---Select State---</option> 
+<option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option> A n N Islands</option><option>Assam</option><option>Bihar</option><option>Chandigarh</option><option>Chhattisgarh</option><option>Dadra and Nagar Haveli</option><option>Daman and Diu</option><option>Delhi</option><option>Goa</option>
+<option>Gujarat</option><option>Haryana</option><option>Himachal Pradesh</option><option>Jammu and Kashmir</option><option>Jharkhand</option><option>Karnataka</option><option>Kerala</option><option>Lakshadweep</option><option>Madhya Pradesh</option><option>Maharashtra</option>
+<option>Manipur</option><option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option><option>Orissa</option><option>Pondicherry</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option><option>Tripura</option>
+<option>Uttar Pradesh</option><option>Uttarakhand(Uttaranchal) </option><option>West Bengal</option></select>
+<br><br>
+
+<b>City</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="city" id="city"> <option> ---Select City---</option></select>
+<br><br>
+
+<b>Group</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<select name="bloodgrp"> <option value=""> ---Select Blood Group---</option> <option>A+</option>
+    <option value="A-">A-</option>
+
+		<option value="B+">B+</option>
+		<option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+		<option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+		<option value="O-">O-</option>
+        <option value="A1+">A1+</option>
+        <option value="A1-">A1-</option>
+        <option value="A2+">A2+</option>
+        <option value="A2-">A2-</option>
+        <option value="A1B+">A1B+</option>
+        <option value="A1B-">A1B-</option>
+        <option value="A2B+">A2B+</option>
+        <option value="A2B-">A2B-</option></select>
+    <br>
+    <br>
+</font><input value="Search" type="submit">
+&nbsp;
+
+ </div></form>
+                   
+                    <div class="box1">
+                    	<h2>Other Links</h2>
+                      <ul class="list1">
+                      <br>
+                      <b><font color="yellow">
+                         <li>&gt;&gt; <a href="bloodrequest.html">Post Blood Request</a></li> 
+                         <li>&gt;&gt; <a href="rotaryclub.html">Rotary Club Participation</a></li>
+                      	<li>&gt;&gt;  <a href="invitefriend.html">Invite Your Friends</a></li>
+                        <li>&gt;&gt;  <a href="other.html">Other Social Welfare Sites</a></li>
+                        <li>&gt;&gt;  <a href="gallery.html">Photo Gallery</a></li>
+                        <li>&gt;&gt;  <a href="donorsspeaks.jsp">Donor's Speak</a></li>
+                        </font></b>
+                        </ul>
+                                     </div>
+ </div>
+                       
+
+                    <div style="clear: both;"></div>
+               </font></font></div><font color="lightgreen"><font color="lightgreen">
+					
+				</font></font></div><font color="lightgreen"><font color="lightgreen">
+				<div id="content_bottom"></div>
+
+				<div id="footer_top">
+
+					<div id="footer_column1">
+
+						<h2><a href="http://www.facebook.com/pages/sahyogcom/365198443514442" target="_blank"><img src="images/facebook.jpeg" alt="facebook" height="20" width="20"></a>    Facebook Plugin</h2>
+
+						
+
+					</div>
+
+					<div id="footer_column2">
+
+						<h2><a href="https://twitter.com/#%21/teamquark2012" target="_blank"><img src="images/twiter.jpeg" alt="twiter" height="20" width="20"></a>    Twitter Plugin</h2>
+
+					
+					</div>
+
+					<div id="footer_column3">
+
+						<h2><a href="https://plus.google.com/113580721352975197256/posts?hl=en" target="_blank"><img src="images/google.jpg" alt="you tube" height="20" width="20"></a>     Google+ Plugin</h2>
+
+						
+
+					</div>
+
+					<div class="clear"></div>
+
+				</div>
+
+				<div id="footer_bot">
+
+					<p><font color="red"><b>Copyright © Team Quark 2012. All Rights Reserved </b></font>
+			      </p><p><a href="contactus.html"><font color="green">Contact Us</font></a><font color="green"> | <a href="privacypolicy.html"><font color="green">Privacy Policy</font></a><font color="green"> </font>
+
+				</font></p></div><font color="green">
+
+		</font></font></font></div>
